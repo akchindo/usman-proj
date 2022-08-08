@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+
+<style type="text/css">
+*
+{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.top
+{
+  background-color: #B22222;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  font-size: 60px;
+  font-family: fantasy;
+  
+
+}
+
+.top2
+{
+  background-color: black;
+  width: 100%
+  height: 90px;
+  text-align: center;
+  font-size: 40px;
+  font-family: fantasy;
+  color:white;
+  margin-top: 0;
+  
+}
+section
+{
+  font-family: fantasy;
+  padding:0
+}
+
+table
+{
+  
+  border-collapse: collapse;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  border-color: #B22222
+}
+
+@media screen and (max-width: 800px) {
+    .mygrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+
+	
+
+
+
+
+
+</style>
+
+</head>
+<body>
+	<section>
+   <div class="top">
+     <p>WE VALUE THE PEOPLE BEHIND THE PLATE</p></div>
+     <div class="top2" ">
+     <p>HOME-DELIGHT</p>
+     <P id = "clock" onload="currentTime()"></P>
+
+     <script>
+function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+  let session = "AM";
+
+  if(hh === 0){
+      hh = 12;
+  }
+  if(hh > 12){
+      hh = hh - 12;
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? "0" + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+   ss = (ss < 10) ? "0" + ss : ss;
+    
+   let time = hh + ":" + mm + ":" + ss + " " + session;
+
+  document.getElementById("clock").innerText = time; 
+  let t = setTimeout(function(){ currentTime() }, 1000);
+}
+
+currentTime();
+
+</script>
+   </div>
+   
+  </section>
+  <section class="mycont">
+    <div>
+     <h3 class="menu-title">MENU</h3>
+      <div class="mygrid">
+        <div class="mycard">
+          <img src="eba.jpg" width="300px" height="300px">
+          <h4 class="food-title">Name: Eba</h4>
+          <a href="#" class="mybtn">PLACE-ORDER</a>
+        </div>
+        <div class="mycard">
+          <img src="danwake.jpg" width="300px" height="300px">
+          <h4 class="food-title">Name: DAN-WAKE</h4>
+          <a href="#" class="mybtn">PLACE-ORDER</a>
+        </div>
+        <div class="mycard">
+          <img src="masa.jpg" width="300px" height="300px">
+          <h4 class="food-title">Name: Masa</h4>
+          <a href="#" class="mybtn">PLACE-ORDER</a>
+        </div>
+        <div class="mycard">
+          <img src="jollof.jpg" width="300px" height="300px">
+          <h4 class="food-title">Name: JOLLOF-RICE</h4>
+          <a href="#" class="mybtn">PLACE-ORDER</a>
+        </div>
+        <div class="mycard">
+          <img src="moi-moi.jpg" width="300px" height="300px">
+          <h4 class="food-title">Name: MOI-MOI</h4>
+          <a href="#" class="mybtn">PLACE-ORDER</a>
+        </div>
+        <div class="mycard">
+          <img src="tuwo-kuka.jpg" width="300px" height="300px">
+          <h4 class="food-title">Name: KUKA</h4>
+          <a href="#" class="mybtn">PLACE-ORDER</a>
+        </div>
+      </div>
+  </section>
+
+</body>
+</html>

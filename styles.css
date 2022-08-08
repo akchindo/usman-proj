@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mycont {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.mycard {
+    width: 300px;
+    /* height: 250px; */
+    background-color: #333;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.food-title {
+    text-align: center;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.menu-title {
+    text-align: center;
+    padding-top: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+.mybtn {
+    display: inline-block;
+    border: none;
+    background: red;
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    margin: 0px 70px;
+    margin-bottom: 15px;
+}
+
+.mygrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    align-items: center;
+    grid-gap: 0.5rem;
+}
+
+
+@media screen and (max-width: 800px) {
+    .mygrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+
+
+
+/* @media only screen and (max-width: 600px) {...} */
